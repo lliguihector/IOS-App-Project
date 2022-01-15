@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "173CC206-399E-434F-9E8F-596954C20759"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9497EEEA-A3A5-4DC0-9309-1C4B41BF21DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "limelog/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "sigIn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80B6B36B-0A90-4B6E-8AF9-0924BE22A122"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "limelog/Controller/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "80B6B36B-0A90-4B6E-8AF9-0924BE22A122 - 6443067b9d626418"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "limelog.DetailViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; limelog.DetailViewController"
+                  moduleName = "limelog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lliguihector/Desktop/limelog-front-end-/limelog/limelog/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "80B6B36B-0A90-4B6E-8AF9-0924BE22A122 - c5a7fba609dee465"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "limelog.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; limelog.DetailViewController"
+                  moduleName = "limelog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lliguihector/Desktop/limelog-front-end-/limelog/limelog/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "80B6B36B-0A90-4B6E-8AF9-0924BE22A122 - 5c1cd8a6a0637823"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "limelog.DetailViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;limelog.DetailViewController&gt;"
+                  moduleName = "limelog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lliguihector/Desktop/limelog-front-end-/limelog/limelog/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "80B6B36B-0A90-4B6E-8AF9-0924BE22A122 - 7da74531a8dd643a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "limelog.DetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;limelog.DetailViewController&gt;"
+                  moduleName = "limelog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lliguihector/Desktop/limelog-front-end-/limelog/limelog/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "80B6B36B-0A90-4B6E-8AF9-0924BE22A122 - 3f11c1b95edd3797"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "limelog.DetailViewController.__deallocating_deinit"
+                  moduleName = "limelog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lliguihector/Desktop/limelog-front-end-/limelog/limelog/Controller/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
