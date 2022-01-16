@@ -30,17 +30,18 @@ class MapView: UIViewController{
         
         super.viewDidLoad()
         
-        locationManager.delegate = self
+        
         ///Asks the User for location permision
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.requestLocation()
+        
+        checkLocationServices()
         
         MapView.showsUserLocation = true
 //        centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
         
-//        view.addSubview(floatingButton)
-        
+     
         
         
         let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .heavy))
@@ -92,39 +93,84 @@ class MapView: UIViewController{
     }
     
     
-    ///Flaating Button
-    private let floatingButton: UIButton = {
-
-        let button = UIButton(frame: CGRect( x: 0, y: 0, width: 60, height: 60 ))
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 30
-        button.backgroundColor = .systemPink
-        
-        return button
-    }()
     
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        floatingButton.frame = CGRect(
-            x: view.frame.size.width - 100 ,
-            y: view.frame.size.height - 400,
-            width: 60,
-            height: 60)
+    func setUpLocationManager(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     
+    func checkLocationServices(){
+        if CLLocationManager.locationServicesEnabled(){
+            setUpLocationManager()
+            checkLocationAuthorization()
+            //Set up your location manager
+        }else{
+            
+            //Show an alert to the user leting them know they have to turn this on.
+        }
+        
+    }
+    
+    
+
+    
+    func checkLocationAuthorization(){
+        
+        
+        switch CLLocationManager.authorizationStatus(){
+    
+        case .authorizedWhenInUse:
+    //DO Map Stuff
+            break
+        case .denied:
+            //Show alert instructing them how to turn on permisions
+            break
+        case.notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        break
+        case .restricted:
+            //Show an alert letting thme know what's up
+        break
+        case .authorizedAlways:
+        break
+        
+        }}
     
     
     //Button Actions
-    
     @IBAction func recenterUserBtn(_ sender: Any) {
         
-    
+        Alert.showBasicAlert(on: self, with: "Determit TEST", message: "This Button will Recenter the users location")
         
         
     }
+    @IBAction func addAnnotationBtn(_ sender: Any) {
+        
+        
+        Alert.showBasicAlert(on: self, with: "Determit TEST", message: "This Button will add an Annotaion")
+    }
     
+    
+    @IBAction func deleteAnnotationBtn(_ sender: Any) {
+        
+        Alert.showBasicAlert(on: self, with: "Determit TEST", message: "This Button will remove an Annotaion")
+    }
+    
+    
+    
+    
+    
+    
+    
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation{
+        
+        let latitude = MapView.centerCoordinate.latitude
+        let longitude = MapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
     
 }
 
@@ -140,31 +186,34 @@ extension MapView: CLLocationManagerDelegate{
     
    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+
         guard let location = locations.last else {return}
         let center =  CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        
-        
+
+
         if(self.isFirstTime){
-            
+
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-            
+
             MapView.setRegion(region, animated: true)
-            
+
             self.isFirstTime = false
-            
-            
-            
-            
-            
+
+
+
+
+
         }
-        
-    
+
+
     }
     
 
+
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
 //        checkLocationAuthorization()
+
+
     }
     
 
@@ -172,5 +221,51 @@ extension MapView: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+    
+}
+
+//MARK: - CCLocationManagerDelegate
+extension MapView: MKMapViewDelegate{
+    
+    
+   
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
+        let center = getCenterLocation(for: MapView)
+        let geoCoder = CLGeocoder()
+        
+        
+        geoCoder.reverseGeocodeLocation(center) { [weak self] (placemarks , error) in
+            
+            guard let self = self else{return}
+            
+            if let _ = error{
+                //TODO: Show alet information to the user
+                return
+            }
+            
+            guard let placemark = placemarks?.first else{
+                
+                return
+            }
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     
 }
