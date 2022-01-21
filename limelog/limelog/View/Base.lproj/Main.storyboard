@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qg-93-U8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410.144927536232" y="-210.26785714285714"/>
+            <point key="canvasLocation" x="2070" y="-210"/>
         </scene>
         <!--Item Details View Controller-->
         <scene sceneID="sAT-vj-PrA">
@@ -609,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvq-tT-oPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175.36231884058" y="-210.26785714285714"/>
+            <point key="canvasLocation" x="2759" y="-210"/>
         </scene>
         <!--Account-->
         <scene sceneID="MGF-G7-UWu">
@@ -629,13 +629,13 @@
                                     <color key="textColor" red="0.28627666829999998" green="0.28627061840000001" blue="0.28627473120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHz-q9-w3R">
-                                    <rect key="frame" x="10" y="101" width="394" height="0.0"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHz-q9-w3R">
+                                    <rect key="frame" x="10" y="101" width="394" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                     <color key="textColor" red="0.2980414629" green="0.29803520439999998" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-FB-VrO">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-FB-VrO">
                                     <rect key="frame" x="177" y="30" width="60" height="60"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -1170,7 +1170,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4PI-Ez-aDW">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7u-5W-Fly">
                                 <rect key="frame" x="344" y="723" width="60" height="60"/>
@@ -1210,17 +1210,17 @@
                                     <action selector="recenterUserBtn:" destination="Kya-7h-N9a" eventType="touchUpInside" id="TyS-r6-P9F"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-aK-CPO">
-                                <rect key="frame" x="187" y="430.5" width="40" height="35"/>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-aK-CPO">
+                                <rect key="frame" x="187" y="428.5" width="40" height="39"/>
+                                <color key="tintColor" red="0.2160838246" green="0.4875405431" blue="0.38822561500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eEQ-3E-Wlz"/>
                                     <constraint firstAttribute="width" constant="40" id="obe-6F-QQt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-RO-pw8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-RO-pw8">
                                 <rect key="frame" x="0.0" y="793.5" width="414" height="19.5"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="backgroundColor" red="0.2160838246" green="0.4875405431" blue="0.38822561500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1229,8 +1229,8 @@
                         <viewLayoutGuide key="safeArea" id="x3M-Ux-ld7"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4PI-Ez-aDW" firstAttribute="top" secondItem="0ET-M7-8ry" secondAttribute="top" id="0V8-dn-kSg"/>
                             <constraint firstItem="6bw-RO-pw8" firstAttribute="leading" secondItem="x3M-Ux-ld7" secondAttribute="leading" id="3QZ-p2-adH"/>
-                            <constraint firstItem="4PI-Ez-aDW" firstAttribute="top" secondItem="x3M-Ux-ld7" secondAttribute="top" id="DgG-U3-4Y5"/>
                             <constraint firstItem="cMN-aK-CPO" firstAttribute="centerY" secondItem="0ET-M7-8ry" secondAttribute="centerY" id="Dxb-Ks-6cA"/>
                             <constraint firstItem="x3M-Ux-ld7" firstAttribute="trailing" secondItem="S7u-5W-Fly" secondAttribute="trailing" constant="10" id="KKx-CI-7LC"/>
                             <constraint firstItem="x3M-Ux-ld7" firstAttribute="bottom" secondItem="4PI-Ez-aDW" secondAttribute="bottom" id="Och-Sl-nye"/>
@@ -1249,12 +1249,10 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="xWF-Ib-pz6">
                         <color key="badgeColor" red="0.1376060247" green="0.6081742644" blue="0.25676009059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Iwg-5Z-ri1">
-                        <barButtonItem key="rightBarButtonItem" id="IrH-t2-hQe"/>
-                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MapView" destination="4PI-Ez-aDW" id="mGb-Ju-okc"/>
+                        <outlet property="addressLabel" destination="6bw-RO-pw8" id="euz-Y2-fDI"/>
                         <outlet property="btn" destination="S7u-5W-Fly" id="9n2-0o-BsP"/>
                         <outlet property="btn2" destination="tED-SY-hmh" id="7MK-TH-dXq"/>
                         <outlet property="btn3" destination="k6N-Iw-edh" id="B1e-JV-PrB"/>
@@ -1345,7 +1343,6 @@
         <scene sceneID="Rtb-bh-CYA">
             <objects>
                 <tabBarController storyboardIdentifier="HomeVC" id="88C-Ci-ejb" customClass="ViewController" customModule="limelog" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="GLP-Td-goO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rMr-kG-uxT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1387,7 +1384,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
-        <image name="circlebadge" catalog="system" width="128" height="120"/>
         <image name="dinnerLogo" width="820" height="419"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
@@ -1406,6 +1402,7 @@
         <image name="scroll" catalog="system" width="128" height="116"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
+        <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1421,9 +1418,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

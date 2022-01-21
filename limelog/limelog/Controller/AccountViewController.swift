@@ -35,13 +35,21 @@ class AccountViewController: UITableViewController,Loadable{
         profileInitialLabel.layer.masksToBounds = true
         profileInitialLabel.layer.borderWidth = 2
        
-        
-       
-        
-//        tabBarController?.navigationItem.largeTitleDisplayMode = .always
-        self.tabBarController?.navigationItem.title = "Account"
        
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        tabBarController?.navigationItem.largeTitleDisplayMode = .automatic
+        self.tabBarController?.navigationItem.title = "Account"
+        
+        
+    }
+    
+    
     
 //MARK: - UI TableView DataSource
     

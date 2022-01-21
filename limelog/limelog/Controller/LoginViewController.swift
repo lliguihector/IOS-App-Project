@@ -44,10 +44,10 @@ class  LoginViewController: UIViewController, Loadable{
 //            navigateToHomeVc()
 //        }
         
-        if state {
-            navigateToHomeVc()
-        }
-        
+//        if state {
+//            navigateToHomeVc()
+//        }
+//
         //Display custome icons inside textFields
         displayIconOnLeftTextFieldView("person", emailTextField)
         emailTextField.clearButtonMode = .whileEditing
