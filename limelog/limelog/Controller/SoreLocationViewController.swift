@@ -64,7 +64,6 @@ class StoreViewController: UIViewController{
         allAnnotations += [tdBankAnnotation,dominosPizzaAnnotation]
     }
     
-    
     //1. CHECK IF LOCATION IS ENABLED
     func checkLocationServices(){
         if CLLocationManager.locationServicesEnabled(){
@@ -125,7 +124,6 @@ class StoreViewController: UIViewController{
     func showStoreLocationAnnotations(_ allocations: [CustomAnnotation]){
 
                 for storeLocations in allAnnotations{
-            
                     let annotations = MKPointAnnotation()
                     annotations.accessibilityAssistiveTechnologyFocusedIdentifiers()
                     annotations.title = storeLocations.title
@@ -133,7 +131,6 @@ class StoreViewController: UIViewController{
                     annotations.coordinate = storeLocations.coordinate
                     annotations.subtitle = storeLocations.subtitle
                     annotations.index(ofAccessibilityElement: storeLocations)
-            
                     mapView.addAnnotation(annotations)
                 }
     }

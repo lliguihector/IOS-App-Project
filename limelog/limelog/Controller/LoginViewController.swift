@@ -8,6 +8,7 @@
 import UIKit
 import LocalAuthentication
 import JWTDecode
+import Firebase
 class  LoginViewController: UIViewController, Loadable{
     
     //OUTLETS
@@ -44,9 +45,9 @@ class  LoginViewController: UIViewController, Loadable{
 //            navigateToHomeVc()
 //        }
         
-//        if state {
-//            navigateToHomeVc()
-//        }
+        if state {
+            navigateToHomeVc()
+        }
 //
         //Display custome icons inside textFields
         displayIconOnLeftTextFieldView("person", emailTextField)
@@ -95,14 +96,25 @@ class  LoginViewController: UIViewController, Loadable{
                  //SET JWT IN USER DEFAULTS
                     TokenService.tokenInstance.saveToke(token)
                     
+                    //Authorise
+                    Auth.auth().signIn(withCustomToken: token ) { user, error in
+                      // ...
+                        print("FireBased Loged in ")
+                        
+                    }
+                    
+                    
+                    
+                    
                     //DECODE JWT AND GET PAYLOAD
                     do{
                         let jwt = try decode(jwt: token)
                         
-                        let claim = jwt.claim(name: "_id")
+                        let claim = jwt.claim(name: "uid")
                         
                         if let id = claim.string{
                             //SET USER ID IN USER DEFAULTS
+                            print(id)
                             TokenService.tokenInstance.saveUserID(id)
                         }
                    
@@ -110,6 +122,10 @@ class  LoginViewController: UIViewController, Loadable{
                         
                         print("Error trying to decode jwt claim")
                     }
+                    
+                    
+                    
+                    
                     DispatchQueue.main.async {
                         self.hideLoadingView()
                     }
@@ -118,6 +134,7 @@ class  LoginViewController: UIViewController, Loadable{
                     DispatchQueue.main.async {
                         
                         self.performSegue(withIdentifier: constant.loginToHomeSegue, sender: self)
+                        
                         
                     }
                    

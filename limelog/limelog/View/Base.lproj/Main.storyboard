@@ -1210,14 +1210,6 @@
                                     <action selector="recenterUserBtn:" destination="Kya-7h-N9a" eventType="touchUpInside" id="TyS-r6-P9F"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-aK-CPO">
-                                <rect key="frame" x="187" y="428.5" width="40" height="39"/>
-                                <color key="tintColor" red="0.2160838246" green="0.4875405431" blue="0.38822561500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eEQ-3E-Wlz"/>
-                                    <constraint firstAttribute="width" constant="40" id="obe-6F-QQt"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-RO-pw8">
                                 <rect key="frame" x="0.0" y="793.5" width="414" height="19.5"/>
                                 <color key="backgroundColor" red="0.2160838246" green="0.4875405431" blue="0.38822561500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1225,19 +1217,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pZ-s1-u8p">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Mq0-ST-9el"/>
+                                    <constraint firstAttribute="height" constant="40" id="tqA-cg-Ngm"/>
+                                </constraints>
+                                <color key="tintColor" red="0.2160838246" green="0.4875405431" blue="0.38822561500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="trash.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCordianatesBtn:" destination="Kya-7h-N9a" eventType="touchUpInside" id="9UZ-1S-aTl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x3M-Ux-ld7"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4PI-Ez-aDW" firstAttribute="top" secondItem="0ET-M7-8ry" secondAttribute="top" id="0V8-dn-kSg"/>
                             <constraint firstItem="6bw-RO-pw8" firstAttribute="leading" secondItem="x3M-Ux-ld7" secondAttribute="leading" id="3QZ-p2-adH"/>
-                            <constraint firstItem="cMN-aK-CPO" firstAttribute="centerY" secondItem="0ET-M7-8ry" secondAttribute="centerY" id="Dxb-Ks-6cA"/>
                             <constraint firstItem="x3M-Ux-ld7" firstAttribute="trailing" secondItem="S7u-5W-Fly" secondAttribute="trailing" constant="10" id="KKx-CI-7LC"/>
                             <constraint firstItem="x3M-Ux-ld7" firstAttribute="bottom" secondItem="4PI-Ez-aDW" secondAttribute="bottom" id="Och-Sl-nye"/>
+                            <constraint firstItem="6pZ-s1-u8p" firstAttribute="centerY" secondItem="0ET-M7-8ry" secondAttribute="centerY" id="RH9-jU-ted"/>
+                            <constraint firstItem="6pZ-s1-u8p" firstAttribute="centerX" secondItem="0ET-M7-8ry" secondAttribute="centerX" id="YO8-Lk-S1B"/>
                             <constraint firstItem="x3M-Ux-ld7" firstAttribute="trailing" secondItem="4PI-Ez-aDW" secondAttribute="trailing" id="ZQo-ZK-beY"/>
                             <constraint firstItem="6bw-RO-pw8" firstAttribute="bottom" secondItem="x3M-Ux-ld7" secondAttribute="bottom" id="bJe-Jj-fkQ"/>
                             <constraint firstItem="x3M-Ux-ld7" firstAttribute="trailing" secondItem="tED-SY-hmh" secondAttribute="trailing" constant="10" id="eZP-TM-1GQ"/>
-                            <constraint firstItem="cMN-aK-CPO" firstAttribute="centerX" secondItem="0ET-M7-8ry" secondAttribute="centerX" id="ejW-xG-fLg"/>
                             <constraint firstItem="S7u-5W-Fly" firstAttribute="top" secondItem="tED-SY-hmh" secondAttribute="bottom" constant="10" id="fjo-wF-Nmc"/>
                             <constraint firstItem="4PI-Ez-aDW" firstAttribute="leading" secondItem="x3M-Ux-ld7" secondAttribute="leading" id="iw7-Qe-7jQ"/>
                             <constraint firstItem="6bw-RO-pw8" firstAttribute="trailing" secondItem="x3M-Ux-ld7" secondAttribute="trailing" id="jFl-hK-OqX"/>
@@ -1253,6 +1259,7 @@
                     <connections>
                         <outlet property="MapView" destination="4PI-Ez-aDW" id="mGb-Ju-okc"/>
                         <outlet property="addressLabel" destination="6bw-RO-pw8" id="euz-Y2-fDI"/>
+                        <outlet property="annotationBtn" destination="6pZ-s1-u8p" id="b1w-ox-Axb"/>
                         <outlet property="btn" destination="S7u-5W-Fly" id="9n2-0o-BsP"/>
                         <outlet property="btn2" destination="tED-SY-hmh" id="7MK-TH-dXq"/>
                         <outlet property="btn3" destination="k6N-Iw-edh" id="B1e-JV-PrB"/>
@@ -1405,7 +1412,7 @@
         <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -6,10 +6,10 @@
 //
 
 import UIKit
-
+import Firebase
 
 class AccountViewController: UITableViewController,Loadable{
-
+ 
     //OUTLETS
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -91,13 +91,26 @@ class AccountViewController: UITableViewController,Loadable{
         alert.addAction(UIAlertAction(title: "Not now", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Sign out", style: .default, handler: {
             action in
+            
+            DispatchQueue.main.async {
             self.signOutUser()
+            
+            }
+            
         }))
         self.present(alert, animated: true)
     }
     
     func signOutUser(){
+        
         //Destory JWT Token and user id
+        let firebaseAuth = Auth.auth()
+    do {
+      try firebaseAuth.signOut()
+    } catch let signOutError as NSError {
+      print("Error signing out: %@", signOutError)
+    }
+
         TokenService.tokenInstance.removeToken()
         TokenService.tokenInstance.removeUserID()
         //Takes you to the initial view controller
