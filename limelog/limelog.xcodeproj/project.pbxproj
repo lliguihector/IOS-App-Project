@@ -27,6 +27,7 @@
 		238C05D627857E1300C4E7F7 /* PLUListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C05D527857E1300C4E7F7 /* PLUListViewController.swift */; };
 		238C05D927863A9200C4E7F7 /* PLUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238C05D727863A9200C4E7F7 /* PLUTableViewCell.swift */; };
 		238C05DA27863A9200C4E7F7 /* PLUTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238C05D827863A9200C4E7F7 /* PLUTableViewCell.xib */; };
+		23930E8727A48BE4009EB384 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 23930E8627A48BE4009EB384 /* FirebaseMessaging */; };
 		2399252A2653070F00BFC9DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239925292653070F00BFC9DC /* LoginViewController.swift */; };
 		239925422653310B00BFC9DC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239925412653310B00BFC9DC /* Alert.swift */; };
 		23992545265344E200BFC9DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23992544265344E200BFC9DC /* Constants.swift */; };
@@ -101,6 +102,8 @@
 		238C05D527857E1300C4E7F7 /* PLUListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUListViewController.swift; sourceTree = "<group>"; };
 		238C05D727863A9200C4E7F7 /* PLUTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUTableViewCell.swift; sourceTree = "<group>"; };
 		238C05D827863A9200C4E7F7 /* PLUTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLUTableViewCell.xib; sourceTree = "<group>"; };
+		23930E8427A488EE009EB384 /* limelog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = limelog.entitlements; sourceTree = "<group>"; };
+		23930E8827A48C0C009EB384 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		239925292653070F00BFC9DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		239925412653310B00BFC9DC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		23992544265344E200BFC9DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 			files = (
 				29C9E6F226B7A02900D327E7 /* SDWebImage in Frameworks */,
 				29C9E6F426B7A02900D327E7 /* SDWebImageMapKit in Frameworks */,
+				23930E8727A48BE4009EB384 /* FirebaseMessaging in Frameworks */,
 				2358FB28279B5C1A00FA90C8 /* FirebaseAnalytics in Frameworks */,
 				297C3ECA2694E2F200E6AC8B /* JWTDecode in Frameworks */,
 				2358FB26279B5C1A00FA90C8 /* FirebaseStorage in Frameworks */,
@@ -174,6 +178,7 @@
 			children = (
 				23143799264A09190048DA3E /* limelog */,
 				23143798264A09190048DA3E /* Products */,
+				23930E8527A48BE4009EB384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +193,7 @@
 		23143799264A09190048DA3E /* limelog */ = {
 			isa = PBXGroup;
 			children = (
+				23930E8427A488EE009EB384 /* limelog.entitlements */,
 				23D2837626640D7900DD12FE /* Utilities */,
 				2399256A265CBF5C00BFC9DC /* custome objects */,
 				2314379A264A09190048DA3E /* AppDelegate.swift */,
@@ -203,6 +209,14 @@
 				23992544265344E200BFC9DC /* Constants.swift */,
 			);
 			path = limelog;
+			sourceTree = "<group>";
+		};
+		23930E8527A48BE4009EB384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23930E8827A48C0C009EB384 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2399256A265CBF5C00BFC9DC /* custome objects */ = {
@@ -362,6 +376,7 @@
 				2358FB23279B5C1A00FA90C8 /* FirebaseAuth */,
 				2358FB25279B5C1A00FA90C8 /* FirebaseStorage */,
 				2358FB27279B5C1A00FA90C8 /* FirebaseAnalytics */,
+				23930E8627A48BE4009EB384 /* FirebaseMessaging */,
 			);
 			productName = limelog;
 			productReference = 23143797264A09190048DA3E /* limelog.app */;
@@ -631,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = limelog/limelog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
 				INFOPLIST_FILE = limelog/Info.plist;
@@ -650,6 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = limelog/limelog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FLMQ8FUJ4T;
 				INFOPLIST_FILE = limelog/Info.plist;
@@ -729,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2358FB22279B5C1A00FA90C8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		23930E8627A48BE4009EB384 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2358FB22279B5C1A00FA90C8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		297C3EC92694E2F200E6AC8B /* JWTDecode */ = {
 			isa = XCSwiftPackageProductDependency;

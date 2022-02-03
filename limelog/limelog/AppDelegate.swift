@@ -7,19 +7,41 @@
 
 import UIKit
 import Firebase
+import FirebaseMessaging
+import UserNotifications
 
 
 
 
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         FirebaseApp.configure()
+        
+        ///Notifications Code
+        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {success, _ in
+            
+            
+            guard success else{
+                return
+            }
+            
+            
+            print("Success in APNS registry")
+        }
+       
+        
+        application.registerForRemoteNotifications()
+            
+            
         Thread.sleep(forTimeInterval: 0.5)
         
         
@@ -48,6 +70,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkMonitor.shared.startMonitoring()
         return true
     }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { token,  _ in
+            
+            guard let token = token else{
+                return
+            }
+            print("Token: \(token)")
+        }
+    }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 
